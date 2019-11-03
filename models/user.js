@@ -1,9 +1,12 @@
-var mongoose 	=	 require('mongoose');
+var mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/nodeauth',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DATABASE_URL,{ 
+	useNewUrlParser: true, 
+	useUnifiedTopology: true 
+});
 
-var db 			=	 mongoose.connection;
-
+var db = mongoose.connection;
 
 //User Schema
 var UserSchema 	=  mongoose.Schema({

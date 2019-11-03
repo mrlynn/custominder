@@ -1,5 +1,4 @@
-# User Login and Registration System
-
+# MongoDB User Registration and Management System (MURMS)
 
 ## Project Description and Features
 
@@ -20,19 +19,14 @@
 * User Authentication with Passport
 * Logout and Access Control
 
-
 ## Section 1 (Install MongoDB)
 
 ### MongoDB :
 
-MongoDB is NoSQL Database and it stores information in JSON format. It is the commonly used DB for Node JS.
-MongoDb makes development fast and it is syntactically simple. It is easy to change and maintain.
+MongoDB is NoSQL Database and it stores information in documents. 
+MongoDB makes development fast and it is syntactically simple. It is easy to change and maintain.
 
-You  can Install MongoDB (for Ubuntu) from here: [Install_MongoDB_Ubuntu](https://docs.mongodb.com/manual/installation/)
-
-You can Install MongoDB (for Linux Mint - Sylvia) from here: [Install_MongoDB_Sylvia](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/)
-
-You can check, if mongoDb is already installed in your system by typing this command in your terminal: 
+You can start using MongoDB for Free in the cloud with [MongoDB Atlas](https://cloud.mongodb.com)
 
 You can find the path of mongoDB installed in your system through: ```$ which mongod``` 
 
@@ -42,21 +36,21 @@ In case of any error with running the mongoDB , you can first run this command: 
 
 You can see the list of databases through: ```> show dbs```
 
-Create new Database by typing: ```> use nodeauth``` (where nodeauth here is the name of Database)
+Create new Database by typing: ```> use murms``` (where nodeauth here is the name of Database)
 
-Create new Collection for ```nodeauth``` DB: ```db.createCollection('users');```
+Create new Collection for ```murms``` DB: ```db.createCollection('users');```
 
 You can see the list of collections through: ```> show collections```
 
-You can INSERT into DB through: ```db.users.insert({name: "NishiGaba"})```
+You can INSERT into DB through: ```db.users.insert({name: "mike"})```
 
 To find all the Records of the Collection: ```db.users.find();``` or ```db.users.find().pretty();```
 
-To update the Record: ``` db.users.update({name: "NishiGaba"},{ $set: {email: "gabanishi45@gmail.com"}}); ```
+To update the Record: ``` db.users.update({name: "mike"},{ $set: {email: "merlynn@gmail.com"}}); ```
 
 To delete the Record: ``` db.users.remove({}); ```
 
-If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs.mongodb.com/?_ga=2.25510269.1120633829.1507739544-13259898.1499097785)
+If you want to dig deep into the mongoDB, visit this link [mongoDB](https://docs.mongodb.com/)
 
 ### Node Modules to Install Before going to Section 2
 
@@ -83,10 +77,9 @@ index.jade in the ``` views``` Directory.
 
 If you want to dig deep in Jade Templating and Express Multiple Views Setup, then just go through with this project:
 
-[Express Website Building and Jade Template Setup](https://github.com/NishiGaba/Basic-Express-Website)
+[Express Website Building and Jade Template Setup](https://github.com/mrlynn/murms)
 
 We are going to add some new Jade Templates for **Register** and **Login** Pages.
-
 
 ## Section 4 (User Registration)
 
@@ -114,7 +107,6 @@ Install Bcrypt using this command:
 
 For detailed information, visit this link: [npmJS](https://www.npmjs.com)
 
-
 ## Section 6 (User Authentication with Passport)
 
 In this Section, we are going to compare the password entered by the user with the bcrypt hashed password and authenticate user and then maintain the session for current logged in user through **passport serializing**.
@@ -134,16 +126,12 @@ In this section, we are going to:
 * Styling some of the **flash** messages.
 * Restrict access of some Routes for not registered users using passport **isAuthenticated()** method.
 
-
 ## How to run this Project:
 
 * Clone this repository by typing following command in your Terminal: 
-	``` git clone https://github.com/NishiGaba/User-Login-System.git ``` 
+	``` git clone https://github.com/mrlynn/murms.git ``` 
 * Then run ``` npm install ``` in the Cloned Project Directory
 * In last, run ``` nodemon ./bin/www ``` command in your Terminal
-
-**Yeahh** :smile: Great work so far. Keep it up. 
-
 
 ## Refrences
 
@@ -151,10 +139,6 @@ In this section, we are going to:
 * [treehouse](https://teamtreehouse.com/home)
 * [npmJS](https://www.npmjs.com)
 
-
 ## License
 
-MIT © [Nishi Gaba](https://github.com/NishiGaba)
-
-
-
+Apache © [Michael Lynn](https://github.com/mrlynn)
